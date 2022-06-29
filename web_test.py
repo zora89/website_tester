@@ -13,12 +13,10 @@ widgets = [' [',
 bar = progressbar.ProgressBar(max_value=20, 
                               widgets=widgets).start()
   
-for i in range(20):
-    time.sleep(0.1)
-    bar.update(i)
+
 
 WebsiteStatus = namedtuple('WebsiteStatus', ['status_code', 'reason'])
-names = ['astratechz', 'multitechnoservices', 'northlandindia', 'nivaunited', 'andamandoorstep', 'hpdoorstep', 'livenit', ]
+names = ['astratechz', 'multitechnoservices', 'northlandindia', 'nivaunited', 'andamandoorstep', 'hpdoorstep', 'livenit', 'apollologisolutions']
 namesin = [ 'goandamans', 'multitechno','singhotels']
 
 def get_status(site):
@@ -33,10 +31,10 @@ def get_status(site):
         reason = 'ConnectionError'
     website_status = WebsiteStatus(status_code, reason)
     return website_status
-
+print("")
 print("TESTING .COM WEBSITES NOW >>>> \n")
 for name in names:
-    for i in range(20):
+    for i in range(10):
         time.sleep(0.1)
         bar.update(i)
     site = 'http://{}.com'.format(name)
@@ -46,7 +44,7 @@ for name in names:
 print("\n TESTING .IN WEBSITES NOW >>>> \n") 
           
 for namein in namesin:
-    for i in range(20):
+    for i in range(10):
         time.sleep(0.01)
         bar.update(i)
 
